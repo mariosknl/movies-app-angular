@@ -6,10 +6,7 @@
       >/10
     </div>
     <div class="movie-item-image">
-      <img
-        [src]="'https://image.tmdb.org/t/p/original/' + itemData.poster_path"
-        [alt]="itemData.title"
-      />
+      <img [src]="imageSizes.medium + itemData.poster_path" [alt]="itemData.title" />
     </div>
     <div class="movie-item-title">{{ itemData.title }}</div>
   </a>
