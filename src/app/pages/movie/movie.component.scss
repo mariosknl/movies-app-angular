@@ -37,3 +37,17 @@
     color: $primaryColor;
   }
 }
+
+.actor {
+  padding: 10px;
+  img {
+    width: 100%;
+  }
+
+  span {
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
