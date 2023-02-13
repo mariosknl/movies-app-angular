@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 
-import { MovieDto } from '../models/movie';
+import { Movie, MovieDto } from '../models/movie';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,10 @@ export class MoviesService {
         return of(res.results.slice(0, count));
       })
     );
+  }
+
+  getMovie(id: string) {
+    return this.http.get<Movie>(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`);
   }
 
   searchMovies(page: number) {
